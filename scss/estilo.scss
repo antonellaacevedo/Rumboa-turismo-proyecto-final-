@@ -1,0 +1,580 @@
+
+$titulos:Arial, Helvetica, sans-serif; 
+$h2:'Poppins', sans-serif;
+$otros: 'Prata',sans-serif;
+
+@import "destinos";
+@import "contactos";
+@import "serviciosexclusivos";
+@import "nosotros";
+
+
+body{
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+ background-color: white;
+
+ header{
+    background-image: url(../media/imagenes/fondo.jpg);
+    width: 100% ; 
+    height: 400px;
+    background-size:cover;
+    left:0;
+    top:0;
+
+    
+
+
+
+  h1{
+    font-size: 3rem;
+    color: black;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    font-family:'Shadows Into Light', cursive;
+    letter-spacing: 5 px;
+    font-weight: bold;}
+    z-index: 0;
+ }
+
+ .navbar{
+     background-color: #167A8B;
+     z-index: 1;
+
+ }
+
+
+  .ccontainer-fluid{
+    background-color: #167A8B;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    width: 90%;
+  
+
+    .form-row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .btn{
+            padding: 0.5rem 1.0rem;
+            margin-top: 1.8rem;
+        }
+     
+    }   
+}
+
+.seccion1{
+    width: 100%;
+    height: 500px;
+
+    
+}
+@mixin titulo {
+    font-family:$h2;
+    color:black;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 3%;   
+    margin-top: 3%;
+    font-weight: bold;   
+}
+
+h2{
+    @include titulo;
+    text-align: center;
+
+}
+
+.carousel{
+    img{
+        height: 500px;   
+    }
+    h6{
+        font-size: 40px;
+        color: black;
+        font-family: $otros;
+        font-weight: bold;
+    }
+    p{
+        font-family: $otros;
+        font-size: 25px;
+        color: black;
+    }
+}
+
+/*segunda sección del index*/
+
+.seccion2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(../media/imagenes/attachment.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    h2{
+        @include titulo
+    }
+
+    .tiposdeviaje{
+        width: 100%;
+        height:auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .card{
+            width: 200px;
+            height: 300px;
+            background-color: #333;
+            border-radius: 10px;
+            margin-top: 30px;
+            outline: 3px solid white;
+            outline-offset: -8px;
+            box-shadow: 3px 3px 10px rgba (0,0,0,.1);
+            position: relative;
+            overflow:hidden;
+            
+            .cardimagen{
+                position:absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: .6 ;
+                transition: transform .75s;
+            }
+
+            .cardtitulo {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                margin-top: 10px;
+                font-size: 30px;
+                text-shadow: 0 0 1px;
+                color: black;
+                font-family: $otros;
+            }
+    
+        }
+
+        .card:hover .cardimagen{
+            transform: scale(1.15);
+        } 
+        .btn-dark {
+            color: white;
+            font-family: $otros;
+            text-decoration: none;
+
+            &:hover{
+                background-color: rgb(75, 71, 71);
+            }
+        }    
+    }
+    
+}
+
+
+.seccion3{
+    h2{
+        @include titulo 
+    }
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    .containerofrecimientos{
+        width: 80%;
+        background-image: url(../media/imagenes/prueba.jpg);
+        background-size: cover;
+        height: 400px;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row ;
+        margin-bottom: 5%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:before {
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        
+
+        
+     
+        
+
+        @mixin cajas {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 2%; 
+            z-index: 1;
+            background-color: rgba(0,0,0,0.5);
+           display: flex;
+           flex-direction: column;
+               
+        }
+            .info1{@include cajas} 
+            .info2{@include cajas} 
+            .info3{@include cajas} 
+            .info4{@include cajas} 
+            
+
+            img{ 
+                width: 100px;
+                object-fit:contain;
+                height: 200px;
+                box-shadow: none;
+                align-self: center;
+                
+            }  
+            
+            h4{
+                font-size: 20px;
+                font-family: $otros;
+                color: rgb(221, 161, 30);
+                text-align: center;
+                letter-spacing: 1px;
+                line-height: 20px;
+                padding-bottom: 1.5rem;
+                padding-top: 0rem;
+                font-weight: bold;
+              
+            }
+            
+            h5{
+                font-size: 15px;
+                font-family: $otros;
+                color: white;
+                text-align: center;
+                letter-spacing: 1px;
+                line-height: 20px;
+                padding-left: 0.3rem;
+                padding-right: 0.3rem;
+                font-weight:600;
+               
+                
+            }
+        }
+
+    }
+
+
+
+
+.seccionespecial{
+
+    h2{
+        @include titulo  
+    }
+
+    p{
+        color: black;
+    }
+
+    small{
+        color: #616161;
+    }
+
+    .card:hover{
+        transform: scale(1.02)
+    }
+    
+}
+
+
+/*footer*/
+
+footer{
+    background: #1f1f1f;
+    
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    
+
+    h3{
+        font-size: 15px;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-top: 5px ;
+        font-family: $otros;
+    }
+    
+
+    .right{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            font-family: $otros;
+            padding-left: 0px;
+            padding-left: 20px;
+            
+            
+        }
+        a:hover{
+            color: black;
+            
+        }
+    }
+
+    .left{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-bottom: 1px solid white;
+
+        
+
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        .ubicacion{
+            width: 300px;
+            height: 100px;  
+        }
+    }
+
+    .iconos{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-around;
+        animation: float 5s ease-in-out infinite;   
+    }
+    .twitter:hover{
+        box-shadow: 0 0 15px rgb(4, 3, 5);
+        border-radius: 10px;
+    }
+    .whatsapp:hover{
+        box-shadow: 0 0 15px rgb(3, 3, 3);
+        border-radius: 10px;
+    }
+    
+    .instagram:hover{
+        box-shadow: 0 0 15px rgb(6, 5, 10);
+        border-radius: 12px;
+    }
+    
+
+    @keyframes float {
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-10px);
+        }
+        100%{
+            transform: translatey(0);
+        }
+        
+    }
+    
+}
+
+@media screen and (min-width: 320px) and (max-width:480px){
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    header{
+
+        background-image: url(../media/imagenes/fondomobile.jpg);
+        height: 250px;
+        width: 100%;
+        margin-bottom: 0px;
+        position: relative;
+        
+     
+     h1{
+        font-size: 2rem;
+         color: black;
+         position: absolute;
+         padding: 15px 0px 0px 20px;
+         
+         font-family:'Shadows Into Light', cursive;
+         font-weight: bold;
+
+        
+        }
+    }
+
+    .seccion2{
+        background-image: url(../media/imagenes/attachment2.jpg);
+        background-size: auto;
+        background-attachment: fixed;
+
+
+        h2{
+        font-family:$h2;
+        color: black;
+        font-size: 30px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-bottom: 3%;   
+        margin-top: 3%;
+        font-weight: bold; 
+        }
+
+        .tiposdeviaje{
+            display: flex;
+            flex-direction: column;
+            height: auto; 
+            justify-content: center;
+
+            .card{
+                margin: 10px;
+                margin: auto;
+            }
+        }
+    }
+    
+
+    .seccion3{
+        .containerofrecimientos{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 1200px;
+            background-image: url(../media/imagenes/cualidades.jpg);
+            background-size: cover;
+            transition: all 3s;
+            margin: 0px;
+            
+
+            
+            @mixin cajasmobile {
+                width: 100%; 
+                height: 300px;   
+                margin-bottom: 0;
+                z-index: 1;
+                margin-left: auto;
+                margin-right: auto;
+                
+                
+                
+            
+            }
+            .info1{@include cajasmobile;} 
+            .info2{@include cajasmobile;}
+            .info3{@include cajasmobile;}
+            .info4{@include cajasmobile;}
+
+            img{
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;   
+            }
+        }
+    }
+
+    .carousel-item{
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 200px !important;
+        } 
+        
+    }
+    .carousel-caption{
+        width: 80%;
+        
+
+        h6{
+            font-size: 20px;
+            margin: 0px 30px 0px 0px;
+            padding-bottom: 20px;
+            
+           
+        }
+        p{
+            font-size: large;
+            margin: 0px 30px 0px 0px;
+            
+            
+            
+        }
+        
+        }   
+
+    
+    footer{
+        width: 100%;
+        height: 400px;   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    h6{
+        width: 5vh;
+
+     }
+     div.centro{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 15px;
+        padding-right: 5px;
+        a{
+            font-size: 13px;
+            padding-left: 5px;
+             
+        }
+     } 
+     
+        
+
+    .derechos{
+        text-align: center;
+        
+    
+    }
+    }
+
+    
+    
+}
+}
+
+
+
+.legales{
+    p{
+        text-align: center;
+        margin: 20px 20px 20px 20px;
+    }
+}

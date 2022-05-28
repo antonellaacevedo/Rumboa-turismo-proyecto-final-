@@ -1,0 +1,235 @@
+ .mainservicios{
+        h2{
+            font-family:$h2;
+            color:black;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 3%;   
+            margin-top: 3%; 
+            font-weight:200;
+        }
+        .serviciosp{
+            font-family: $otros;
+            text-align: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            
+           
+        }
+    
+        .todoslosviajes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        
+       @mixin secciones {
+        width: 45%;
+        height: 350px;
+        background-color: #7dbac5;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 30px ;
+        box-shadow: 5px 5px 10px  black
+           
+       }
+       .seccionamigos{
+        @include secciones;
+        background: #7dbac5;
+    }
+
+    .seccionfamilia{
+        @include secciones;
+        background-color: #7dbac5;
+    }
+    .seccionsolitario{
+        @include secciones;
+        background-color: #167A8B;
+    }
+
+    .seccionaleatorio{
+        @include secciones;
+        background-color: #167A8B;
+    }
+
+    .btn-dark{align-items: center;
+
+    }
+        
+            
+            
+            img{
+                width: 250px;
+                height: 220px;
+            }
+            button{
+                margin-top: 20px;
+            }
+            
+            p{
+                
+                font-size: 13px;
+                text-align: center;
+                padding-left: 15px;
+            }
+            h5{
+                text-align: center;
+                font-size: 25px;
+                padding-left: 15px;
+            }
+            
+        }
+
+.pronto{
+    background-color: white;
+    font-family: $otros;
+    font-size: 25px;
+    margin: 20px 0px 20px 20px;
+    padding: 10px 50px 10px 50px;
+    color: black;
+    border:  3px solid deepskyblue;
+    cursor: pointer;
+    position: relative;
+    width: 70%;
+    box-shadow: 10px 10px 5px #4682B4;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .pronto::before,
+    .pronto::after{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: 0.5s ease;
+    } 
+
+    .pronto::before{
+        left: -15px;
+        top: -15px;
+        border-width: 3px 0 0 3px;
+    }
+    
+
+    .pronto::after{
+        right: -15px;
+        bottom: -15px;
+        border-width: 0 3px 3px 0;
+    }
+
+    .pronto:hover::after,
+    .pronto:hover::before{
+        width: calc( 50% + 20%);
+        height: calc(50% + 20%);
+
+    }
+    .pronto:hover{
+        background-color: #7dbac5;
+
+    }
+    
+
+
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width:480px){
+
+    .mainservicios{
+
+        @mixin seccionesmobile {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            padding: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+             
+        }
+
+        .seccionsolitario{
+            @include seccionesmobile
+        }
+
+        .seccionaleatorio{
+            @include seccionesmobile
+        }
+
+        .seccionfamilia{
+            @include seccionesmobile
+        }
+
+        .seccionamigos{
+            @include seccionesmobile
+        }
+            
+            .conjunto{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .btn{
+                    margin-top: 20px;
+                    width: 100px;
+                    margin-right: auto;
+                    margin-left:auto ;
+                    margin-bottom: 20px;
+                    
+                }
+                img{
+                    width: 250px;
+                    height: 200px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+    
+            .conjunto2{
+    
+                display: flex;
+                flex-direction: column;
+                
+                
+                h5{
+                    font-size: 20px;
+                    font-family: $otros;
+                }
+                p{
+                    font-size: 15px;
+                    font-family: $otros;
+                    margin: 5px 5px 5px 5px;
+                }
+                
+    
+            }
+            
+           
+        }
+
+
+        .pronto{
+            font-size: 15px;
+            padding: 10px 10px 10px 10px;
+        }
+        
+    }
+
+
+  
+
+    
+
+

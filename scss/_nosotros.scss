@@ -1,0 +1,127 @@
+.nosotros{
+    h2{
+        font-family:$h2;
+    color:black;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 3%;   
+    margin-top: 3%;
+    font-weight:200;
+    
+        
+    }
+
+    @mixin contenedorM {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .contenedor{
+        @include contenedorM
+    }
+        img{
+           object-fit: cover;
+           width: 300px;
+           height: 300px;
+        }
+    
+    
+    @mixin textoM {
+        width: 90%;
+        display: flex;
+        float: left;
+        flex-direction: column;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: 20px;
+        padding-top: 2rem;
+        text-align: justify;  
+    }
+     
+    .texto{
+        @include textoM
+    }
+        
+    @mixin parrafoM {
+        display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+    }
+    .parrafo{
+        @include parrafoM
+        }
+    
+    .contenedorreverse{
+        @include contenedorM;
+    
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+.nosotros{
+
+    h2{
+        font-size: 25px;
+    }
+
+    .contenedor{
+    display: flex;
+    flex-direction: column;
+   
+    .texto{
+        margin: 0;
+        text-align: center;
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.contenedorreverse{
+    display: flex;
+  flex-direction: column-reverse;
+
+  .texto{
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+
+    .texto{
+      margin:0;
+      text-align: center;
+      font-size: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+}
+.nosotros img{
+ width: 200px;
+ height: 200px;
+ margin-left: auto;
+ margin-right: auto;
+}
+}  
+
